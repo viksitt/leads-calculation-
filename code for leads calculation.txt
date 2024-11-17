@@ -1,0 +1,29 @@
+const lead = inputData;
+let score = 0;
+
+// Company Size
+if (lead.companySize === '1-50 employees') score += 10;
+else if (lead.companySize === '51-200 employees') score += 20;
+else if (lead.companySize === '201-1000 employees') score += 30;
+else if (lead.companySize === '1000+ employees') score += 40;
+
+// Annual Budget
+if (lead.annualBudget === 'Less than $10,000') score += 10;
+else if (lead.annualBudget === '$10,000 - $50,000') score += 20;
+else if (lead.annualBudget === '$50,001 - $100,000') score += 30;
+else if (lead.annualBudget === 'More than $100,000') score += 40;
+
+// Industry
+if (lead.industry === 'Technology') score += 30;
+else if (lead.industry === 'Finance') score += 25;
+else if (lead.industry === 'Healthcare') score += 20;
+else if (lead.industry === 'Retail') score += 15;
+else score += 10;
+
+// Urgency of Need
+if (lead.urgency === 'Immediate (within 1 month)') score += 50;
+else if (lead.urgency === 'Short-term (1-3 months)') score += 40;
+else if (lead.urgency === 'Medium-term (3-6 months)') score += 20;
+else if (lead.urgency === 'Long-term (6+ months)') score += 10;
+
+return {score}; write brief description about code in short 
